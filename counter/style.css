@@ -1,0 +1,52 @@
+body{
+	padding: 0px;
+	margin:0px;
+
+}
+.hafiz{
+	width: 400px;
+	background: #e8dbdb;
+	height: 16px;
+	border-radius: 10px;
+
+}
+.mamun{
+	padding: 10px 0px;
+}
+.delu{
+	width: 0%;
+	height: 16px;
+	background-color: blue;
+	position: relative;
+	transition: 2s linear;
+}
+.delu::before{
+	content: attr(per);
+	position: absolute;
+	display: block;
+	padding: 1px 6px;
+	background-color: #000;
+	color:#fff;
+	font-size: 15px;
+	top: -35px;
+	left: 206px;
+	transform: translateX(50%);
+}
+.delu::after{
+	content: '';
+	position: absolute;
+	display: block;
+	width: 10px;
+    height: 10px;
+	background-color: #000;
+	top: -20px;
+    left: 234px;
+	transform: translateX(50%) rotate(45deg);
+}
+#masumbillah{
+    display: flex;
+    width: 100%;
+}
+#sayembillah{
+    width: 50%;
+}

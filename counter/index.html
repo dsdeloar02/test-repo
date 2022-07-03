@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+<body>
+
+    <div class="dsdeloskill">
+        <div class="container">
+            <div class="row" id="masumbillah">
+              <div class="col-sm-6" id="sayembillah">
+                <div class="dsdelo">
+                    <div class="masum">
+                      <div class="mamun">HTML</div>
+                        <div class="hafiz">
+                          <div class="delu" per="90"></div>
+                        </div>
+                      
+                    </div>
+              
+                    <div class="masum">
+                      <div class="mamun">CSS</div>
+                        <div class="hafiz">
+                          <div class="delu" per="60"></div>
+                        </div>
+                      
+                    </div>
+              
+                    <div class="masum">
+                      <div class="mamun">JAVASCRIPT</div>
+                        <div class="hafiz">
+                          <div class="delu" per="70"></div>
+                        </div>
+                      
+                    </div>
+              
+                    <!-- <div class="masum">
+                      <div class="mamun">PSD TO HTML</div>
+                        <div class="hafiz">
+                          <div class="delu" per="80"></div>
+                        </div>
+                      
+                    </div> -->
+                  </div>
+              </div>
+              <div class="col-sm-6" id="rabbibillah">
+                <div class="dsdelo">
+                    <div class="masum">
+                      <div class="mamun">HTML</div>
+                        <div class="hafiz">
+                          <div class="delu" per="90"></div>
+                        </div>
+                      
+                    </div>
+              
+                    <div class="masum">
+                      <div class="mamun">CSS</div>
+                        <div class="hafiz">
+                          <div class="delu" per="60"></div>
+                        </div>
+                      
+                    </div>
+              
+                    <div class="masum">
+                      <div class="mamun">JAVASCRIPT</div>
+                        <div class="hafiz">
+                          <div class="delu" per="70"></div>
+                        </div>
+                      
+                    </div>
+              
+                    <!-- <div class="masum">
+                      <div class="mamun">PSD TO HTML</div>
+                        <div class="hafiz">
+                          <div class="delu" per="80"></div>
+                        </div>
+                      
+                    </div>
+                  </div> -->
+              </div>
+              
+            </div>
+          </div>
+    </div>
+
+    <!-- <div class="dsdelo">
+      <div class="masum">
+        <div class="mamun">HTML</div>
+          <div class="hafiz">
+            <div class="delu" per="90"></div>
+          </div>
+        
+      </div>
+
+      <div class="masum">
+        <div class="mamun">CSS</div>
+          <div class="hafiz">
+            <div class="delu" per="60"></div>
+          </div>
+        
+      </div>
+
+      <div class="masum">
+        <div class="mamun">JAVASCRIPT</div>
+          <div class="hafiz">
+            <div class="delu" per="70"></div>
+          </div>
+        
+      </div>
+
+      <div class="masum">
+        <div class="mamun">PSD TO HTML</div>
+          <div class="hafiz">
+            <div class="delu" per="80"></div>
+          </div>
+        
+      </div>
+    </div> -->
+    <script>
+    //     $ ('.delu') .each(function(){
+    //     var $this = $(this);
+    //     var per = $this.attr('per');
+    //     $this.css('width',per+'%');
+    //   });
+
+    $('.delu').each(function(){
+        var $this = $(this);
+        var per = $this.attr('per');
+        $this.css("width",per+'%');
+        $({animatedValue: 0}).animate({animatedValue: per},{
+          duration: 1000,
+          step: function(){
+            $this.attr('per', Math.floor(this.animatedValue) + '%');
+          },
+          complete: function(){
+            $this.attr('per', Math.floor(this.animatedValue) + '%');
+          }
+        });
+      });
+    </script>
+
+<input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+  
+</body>
+</html>
